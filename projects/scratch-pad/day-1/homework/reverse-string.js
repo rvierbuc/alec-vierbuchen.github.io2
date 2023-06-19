@@ -21,8 +21,15 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+    //create a storage array
+    let arr = [];
+    //loop through string from the end
+    for(let i = input.length - 1; i >= 0; i--){
+      //push the current value to to the storage array
+      arr.push(input[i]);
+    }
+    //return the array joined
+    return arr.join('');
     
     
     // YOUR CODE GOES ABOVE HERE //
