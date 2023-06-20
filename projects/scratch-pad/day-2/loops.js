@@ -12,7 +12,11 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+  //loop through array
+  for(let i = 0; i < array.length; i++){
+    //log current value
+    console.log(array[i]);
+  }
   
   
   
@@ -25,7 +29,11 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+  //loop through array backwards
+  for(let i = array.length - 1; i >= 0; i--){
+    //log current array item
+    console.log(array[i]);
+  }
   
   
   
@@ -37,8 +45,8 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //return the object keys as a array
+  return Object.keys(object);
   
   
   // YOUR CODE ABOVE HERE //
@@ -50,7 +58,11 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  //loop over object with for in
+  for (let key in object) {
+  //log key
+    console.log(key);
+  }
   
   
   
@@ -62,8 +74,8 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //return an array of the object values
+  return Object.values(object);
   
   
   // YOUR CODE ABOVE HERE //
@@ -75,7 +87,11 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  //loop over object keys
+  for (let key in object) {
+    //log the object value at key
+      console.log(object[key]);
+    }
   
   
   
@@ -87,11 +103,9 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  //return length of an array of the object keys
+  return Object.keys(object).length
+    // YOUR CODE ABOVE HERE //
 }
 
 /** 
@@ -100,7 +114,13 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  //create storage array of object keys
+  let store = Object.keys(object)
+  //loop through array in reverse
+  for(let i = store.length - 1; i >= 0; i--){
+    //print value at current key in store
+    console.log(object[store[i]]);
+  }
   
   
   
