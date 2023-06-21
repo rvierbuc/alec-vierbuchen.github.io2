@@ -23,7 +23,27 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
+    //if the numbers are the same, return the number as an array
+    if(start === end){
+        return[start];
+    }
+    //if start is bigger than end, count down from start to end pushing each number into a storage array
+    if(start > end){
+        let arr = [];
+        for(let i = start; i >= end; i--){
+            arr.push(i)
+        }
+        //return storage array
+        return arr;
+        //if start is smaller than end, count up from start to end pushing each number into a storage array
+    } else if(start < end){
+        let arr = [];
+        for(let i = start; i <= end; i++){
+            arr.push(i);
+        }
+        //return storage array
+        return arr;
+    }
     
     
     

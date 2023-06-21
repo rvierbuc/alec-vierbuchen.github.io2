@@ -14,7 +14,8 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    //return boolean response on test if value is array
+    return Array.isArray(value)
     
     
     
@@ -31,7 +32,19 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
+    //if the value is null return false
+    if(value === null){
+return false;
+//else if the value is an array, return false
+    }else if(Array.isArray(value)){
+        return false;
+        //else if value is a date, return false
+    }else if(value instanceof Date){
+return false;
+//else if the type of the value is an object, return object
+    }else if(typeof value === 'object'){
+        return true;}
+        else return false;
     
     
     
@@ -46,7 +59,20 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+    //if the value is null, return false
+    if(value === null){
+        return false;
+        //if the value is an array return true
+            }else if(Array.isArray(value)){
+                return true;
+                //if the value is a date return false
+            }else if(value instanceof Date){
+        return false;
+        //if the value is an object return true
+            }else if(typeof value === 'object'){
+                return true;}
+//otherwise return false
+                else return false;
     
     
     
@@ -74,7 +100,20 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
+    //if the value is null return 'null'
+    if(value === null){
+        return 'null';
+        //else if the value is an array, return 'array'
+            }else if(Array.isArray(value)){
+                return 'array';
+                //else if the value is a date, return 'date'
+            }else if(value instanceof Date){
+        return 'date';
+        //else if the value is an object, return 'object'
+            }else if(typeof value === 'object'){
+                return 'object';}
+                //otherwise return the type of the value
+                else return typeof value;
     
     
     
