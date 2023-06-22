@@ -95,6 +95,7 @@ function makeContact(id, nameFirst, nameLast) {
                 let current = contacts[i];
                 //push the first name a space and the last name from the current object into the array
                 store.push(current.nameFirst + ' ' + current.nameLast);
+                //if it is not the last object in the array, add a new line character
                 if(i !== contacts.length - 1){
                     store.push('\n')
                 }
