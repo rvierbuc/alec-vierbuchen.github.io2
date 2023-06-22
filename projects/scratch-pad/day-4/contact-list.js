@@ -92,15 +92,14 @@ function makeContact(id, nameFirst, nameLast) {
             //loop through contacts
             for(let i = 0; i < contacts.length; i++){
                 //current index value object is defined as current
-                let current = contacts[i]
-                if(i < contacts.length - 1){
+                let current = contacts[i];
                 //push the first name a space and the last name from the current object into the array
-                store.push(current.nameFirst + ' ' + current.nameLast +'\n');
-                }else{
-                    store.push(current.nameFirst + ' ' + current.nameLast);
+                store.push(current.nameFirst + ' ' + current.nameLast);
+                if(i !== contacts.length - 1){
+                    store.push('\n')
                 }
-                //return the storage array joined by new line characters.
             }
+            //return the storage array joined by new line characters.
             return store.join('')
             }
             
