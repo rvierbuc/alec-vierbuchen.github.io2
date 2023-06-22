@@ -35,24 +35,78 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
-} 
-
-
-function makeContactList() {
-    /*
-     * You need something here to hold contacts. See length api for a hint:
-     */
-    var contacts;
+    //return an object with the inputs
+    return{
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast}
+    } 
     
-    return {
-        // we implemented the length api for you //
-        length: function() {
-            return contacts.length;
+    
+    function makeContactList() {
+        /*
+         * You need something here to hold contacts. See length api for a hint:
+         */
+        var contacts = [];
+        
+        return {
+            // we implemented the length api for you //
+            length: function() {
+                return contacts.length;
+            },
+            addContact(contact){
+            contacts.push(contact);
+        },
+        //findContact is a function that takes a string of a full name
+        findContact: function(fullName){
+            //create a storage array that splits the name at a space
+            let store = fullName.split(' ')
+            //loop through contacts
+            for(let i = 0; i < contacts.length; i++){
+            //set current equal to contact accessed by current index value
+            let current = contacts[i]
+            //if the first name and last name match the array values, return the current contact
+                if(store[0] === current.nameFirst && store[1] === current.nameLast){
+                return current;
+            }
+            }
+            //otherwise return undefined
+            return undefined;
+        },
+        //removeContact is a function that takes a contact object
+        removeContact: function(contact){
+            //loop through contacts array
+            for (let i = 0; i < contacts.length; i++) {
+                //if the current contact matches the inputted contact, splice it out
+                if (contacts[i] === contact) {
+                    contacts.splice(i, 1);
+                }
+              }
+              //return the updated contacts
+              return contacts;
+            },
+        //printAllContactNames is a function that doesn't need an input    
+        printAllContactNames: function(){
+            //create a storage array
+            let store = [];
+            //loop through contacts
+            for(let i = 0; i < contacts.length; i++){
+                //current index value object is defined as current
+                let current = contacts[i]
+                if(i < contacts.length - 1){
+                //push the first name a space and the last name from the current object into the array
+                store.push(current.nameFirst + ' ' + current.nameLast +'\n');
+                }else{
+                    store.push(current.nameFirst + ' ' + current.nameLast);
+                }
+                //return the storage array joined by new line characters.
+            }
+            return store.join('')
+            }
+            
         }
-    }
-}
-
+            };
+    
 
 
 
