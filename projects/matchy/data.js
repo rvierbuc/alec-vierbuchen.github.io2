@@ -11,29 +11,43 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//create an empty object called animal
 animal = {};
+//set animal's species equal to Cat
 animal.species = 'Cat';
+//set animal's name to Serpico
 animal.name = 'Serpico';
+//set noises to an empty array
 animal.noises = [];
+//log the object
 console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//a noises array as an empty array
 var noises = [];
+//add meow to noises with bracket notation
 noises[0] = 'Meow';
+//add hiss to to noises with push
 noises.push('Hiss');
+//add scratching to array with unshift
 noises.unshift('Scratching');
+//add purring to the end of the array
 noises[noises.length] = 'Purring';
+//log noises length
 console.log(noises.length);
+//log the last item in the array
 console.log(noises[noises.length - 1]);
+//log the array
 console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//add the noises array to the animal object
 animal.noises = noises;
+//add tiny mew to the noises array in the animal object
 animal.noises.push('Tiny Mew');
 
 
@@ -59,14 +73,23 @@ animal.noises.push('Tiny Mew');
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//create an empty array called animals
 var animals = [];
+//add the animal object to the array
 animals.push(animal);
+//log the array
 console.log(animals);
+//create a duck object
 var duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] };
+//add duck object to the animals array
 animals.push(duck)
+//create a cow object
 var cow = { species: 'cow', name: 'Bessie', noises: ['moo', 'low', 'snort', 'stamp']};
+//add cow to the animals array
 animals.push(cow);
+//create a snake object
 var snake = { species: 'snake', name: 'Arthur', noises: ['hiss', 'sussurus', 'tongue flick']};
+//add snake to the animals array
 animals.push(snake);
 
 /*
@@ -88,10 +111,13 @@ Imagine that our website has a profile page for each animal. On this profile pag
  9. [ ] `console.log` your work.
 */
 //arrays are good for ordered lists and there will not be a key, so it shouldn't be an object
+//create an empty array called friends
 var friends = [];
+//create a function called get random that generates a random integer corresponding to the array index
 function getRandom(array){
   return Math.floor(Math.random() * array.length);
 }
+//push
 friends.push(animals[getRandom(animals)].name);
 console.log(friends);
 animals[getRandom(animals)].friends = friends;
