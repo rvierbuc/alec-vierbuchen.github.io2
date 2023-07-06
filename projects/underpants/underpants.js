@@ -25,6 +25,7 @@ var _ = {};
 *   _.identity({a: "b"}) === {a: "b"}
 */
 _.identity = function(value){
+    //return the input value unchanged
     return value;
 }
 console.log(_.identity(1))
@@ -48,11 +49,14 @@ console.log(_.identity(1))
 * _.typeOf([1,2,3]) -> "array"
 */
 _.typeOf = function(value){
+    //if the value is an array, return array
     if(Array.isArray(value)){
         return 'array'
+        //if the value is null, return 'null'
 }    else if(value === null){
         return 'null'
     }
+    //otherwise, return the typeof the value
     else{
     return typeof value
 };
@@ -76,17 +80,26 @@ console.log(_.typeOf(5))
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
 _.first = function(array, number){
+    //if the array input is not an array, return an empty array
     if(!Array.isArray(array)){
         return [];
+        //if the type of number is not 'number' or number is falsy
     } else if(!_.typeOf(number) === 'number' || !number){
+        //return the first item in the array
         return array[0];
+        //if the array's length is smaller than the number, return the entire array
     } else if(array.length < number){
         return array;
+    //otherwise
     }else{
+        //create a storage array
         let result = [];
+        //;pp[ through the array until the index is the number]
         for(let i = 0; i < number; i++){
+            //push the current value to the storage array
             result.push(array[i]);
         }
+        //return the storage array
         return result;
     }
 }
@@ -165,14 +178,12 @@ _.indexOf = function(array, value){
 * Examples:
 *   _.contains([1,"two", 3.14], "two") -> true
 */
-_.contains = function(array, value){
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === value){
-            return true;
-        }
-    }
-    return false;
-}
+_.contains = function(array, value) {
+    return array.indexOf(value) !== -1 ? true : false;
+  };
+  
+
+
 
 /** _.each
 * Arguments:
@@ -195,10 +206,9 @@ for(let i = 0; i < collection.length; i++){
     func(collection[i], i, collection)
 }
 }
-
-else if(_.typeOf(collection) === 'object'){
-    for(let i = 0; i < Object.values(collection).length; i++){
-        func(Object.values(collection)[i], Object.keys(collection)[i], collection)
+else {
+    for (var key in collection) {
+        func(collection[key], key, collection);
     }
 }
 };
