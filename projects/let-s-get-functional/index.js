@@ -26,22 +26,59 @@ var maleCount = function(array) {
     return _.filter(array, function(current){return current.gender === 'male';}).length;
 };
 
-var femaleCount = function(array){
-    return _.reduce(array, function(current){return current.gender === 'female', 0;})
+var femaleCount = function(array) {
+    return _.reduce(array, function(count, current) {
+        if (current.gender === 'female') {
+            return count + 1;
+        } else {
+            return count;
+        }
+    }, 0);
 };
+
 
 var oldestCustomer = function(array){
     let oldest = _.reduce(array, function(accumulator, current){
         if(current.age > accumulator.age){
             accumulator = current;
         }
+        return accumulator;
     })
     return oldest.name;
 };
 
-var youngestCustomer;
+var youngestCustomer = function(array){
+    let youngest = _.reduce(array, function(accumulator, current){
+        if(current.age < accumulator.age){
+            accumulator = current;
+        }
+        return accumulator;
+    })
+    return youngest.name;
+};
 
-var averageBalance;
+var averageBalance = function(array) {
+    //create a count variable
+    let count = 0;
+    //create a running total of balances and use reduce to add all balances
+    let balanceSum = _.reduce(array, function(accumulator, current) {
+        //if current item has a balance
+        if (current.balance) {
+            //create a variable balance that is a number with the non-numeric characters removed
+            const balance = parseFloat(current.balance.replace(/[^0-9.-]+/g,""))
+            //set accumulator equal to accumulator plus the current balance
+            accumulator += balance;
+            //add to the count
+            count++;
+        }
+        //return the sum of all balances
+        return accumulator;
+    }, 0);
+//return the sum of all balances divided by the count
+    return balanceSum / count;
+};
+
+
 
 var firstLetterCount;
 
