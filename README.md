@@ -19,4 +19,4 @@
 6) In terminal, type => npm install -g opspark
 7) In terminal, type => os install
 8) Select project to install
-CURRENT PAT: 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
+CURRENT PAT: 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

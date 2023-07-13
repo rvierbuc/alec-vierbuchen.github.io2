@@ -34,16 +34,34 @@ function reverseArrayInPlace() {
 // arrayToList /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function arrayToList() {
-
+function arrayToList(array) {
+//creates rest varibale and sets it equal to null
+  let rest = null;
+  //loops backwards through the array
+for(let i = array.length - 1; i >=0; i--){
+//sets rest equal to an object with key value set to current array item and a rest key with a value set to rest
+rest = {
+  value: array[i], 
+  rest: rest
+};
+}
+//returns the rest object
+return rest;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // listToArray /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function listToArray() {
-
+function listToArray(obj, result=[]) {
+if(obj.rest === null){
+result.push(obj.value)
+return result;
+}
+else{
+  result.push(obj.value)
+  return listToArray(obj.rest, result);
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +84,11 @@ function nth() {
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function deepEqual() {
+function deepEqual(x, y) {
+  if(x === y){
+    return true;
+  }
+  if (typeof a !== 'object' || a -)
 
 }
 

@@ -78,11 +78,27 @@ var averageBalance = function(array) {
     return balanceSum / count;
 };
 
+var firstLetterCount = function(array, letter) {
+    return _.reduce(array, function(accumulator, current) {
+        if (current.name[0].toLowerCase() === letter.toLowerCase()) {
+            accumulator += 1;
+        }
+        return accumulator;
+    }, 0);
+};
 
-
-var firstLetterCount;
-
-var friendFirstLetterCount;
+var friendFirstLetterCount= function(array, name){
+    const result = [];
+    
+    array.forEach(customer => {
+      if (customer.friends.includes(name)) {
+        result.push(customer.name);
+      }
+    });
+    
+    return result;
+  };
+  
 
 var friendsCount;
 
