@@ -55,7 +55,7 @@ const _ = require('lodown-oliviasaborush');
 
 ### 5: `averageBalance`
  - **Objective**: Find the average balance of all customers
- - **Input**: `Array`
+ - **Input**: `Array`fi
  - **Output**: `Number`
  - **Constraints**:
 

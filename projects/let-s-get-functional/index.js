@@ -87,24 +87,86 @@ var firstLetterCount = function(array, letter) {
     }, 0);
 };
 
-var friendFirstLetterCount= function(array, name){
-    const result = [];
-    
-    array.forEach(customer => {
-      if (customer.friends.includes(name)) {
-        result.push(customer.name);
+var friendFirstLetterCount = function(array, customer, letter) {
+    return _.reduce(array, function(accumulator, current) {
+      if (current.name === customer) {
+        accumulator = current.friends.reduce(function(accumulator, friend) {
+          if (friend.name[0].toLowerCase() === letter.toLowerCase()) {
+            return accumulator + 1;
+          }
+          return accumulator;
+        }, 0);
       }
-    });
-    
-    return result;
+      return accumulator;
+    }, 0);
   };
   
+  
 
-var friendsCount;
+  var friendsCount = function(array, name) {
+    if (!name) {
+        return [];
+      }
+    
+      const lowercaseName = name.toLowerCase();
+    
+      const result = array.filter((customer) => {
+        for (let i = 0; i < customer.friends.length; i++) {
+          if (customer.friends[i].name.toLowerCase() === lowercaseName) {
+            return true;
+          }
+        }
+        return false;
+      });
+    
+      return result.map((customer) => customer.name);
+    }
+  
+  
 
-var topThreeTags;
+var topThreeTags = function(array){
+//create an object to store the tag totals
+    var tagTots = {};
+//for each element of the array
+    array.forEach(function(customer){
+//tags is the current customer tags
+        var tags = customer.tags;
+//for each element of tags
+        tags.forEach(function(tag){
+//if the tag exists in the tagTots object, add one to it
+            if(tagTots[tag]){
+                tagTots[tag]++
+//if the tag does not exist in the object, create it and set it equal to 1
+            }else{
+                tagTots[tag] = 1;
+            }
+        });
+    });
+//create an array called store that is the entries from the object tagTots
+let store = Object.entries(tagTots);
+//sort the array is descending order based on the count
+store.sort(function(a, b){
+    return b[1] - a[1];
+});
+//the top three values are the first three values in the sorted array
+let topThreeValues = store.slice(0, 3);
+//map names of the top three values to a result array
+let result = topThreeValues.map(function(count){
+    return count[0];
+})
+//return the result
+return result;
+};
 
-var genderCount;
+var genderCount = function(array){
+    //iterate with reduce and accumulate the genders
+    return array.reduce(function(accumulator, current){
+        //if current gender is truthy in obj add one, or if falsy set it equal to zero and add one
+        accumulator[current.gender] = (accumulator[current.gender] || 0) + 1;
+        //return the accumulator
+        return accumulator;
+    }, {});
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
