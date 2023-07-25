@@ -1,0 +1,147 @@
+/* Styles for body element */
+body {
+    background: rgb(125, 198, 205);
+    color: rgb(45, 45, 45);
+    padding: 10px;
+    font-family: arial;
+  }
+  
+  /* Styles for header element */
+  header {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Styles for element with ID 'all-contents' */
+  [id=all-contents] {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Styles for navigation menu */
+  nav {
+    background: rgb(239, 80, 41);
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+  }
+  
+  /* Styles for header element inside nav */
+  nav header {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    flex: 1;
+  }
+  
+  /* Styles for unordered list inside nav */
+  nav ul {
+    list-style-image: none;
+  }
+  
+  /* Styles for list items inside nav */
+  nav li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  
+  /* Styles for links inside nav */
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Styles for main container area beneath menu */
+  main {
+    background: rgb(245, 238, 219);
+    display: flex;
+    padding: inherit;
+  }
+  
+  /* Styles for elements with class 'content' */
+  [class=content] {
+    flex: 1;
+    border-radius: 35px;
+    padding: 15px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Styles for headings inside elements with class 'content' */
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    margin: 10px;
+  }
+  
+  /* Styles for anchor tags inside section elements inside elements with class 'content' */
+  .content section > a {
+    text-decoration: none;
+  }
+  
+  /* Styles for elements with class 'code' */
+  .code {
+    font-family: monospace;
+    background: #eee;
+    border: 1px solid #ccc;
+    color: #222;
+    white-space: pre;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: scroll;
+  }
+  
+  /* Styles for elements with class 'topic-heading' */
+  .topic-heading {
+    padding-left: 50px;
+    text-transform: capitalize;
+  }
+  
+  /* Styles for elements with class 'line' */
+  .line {
+    display: flex;
+    padding: 2px 0;
+  }
+  
+  /* Styles for even elements with class 'line' */
+  .line:nth-child(even) {
+    background: #ddd;
+  }
+  
+  /* Styles for elements with class 'line-number' */
+  .line-number {
+    min-width: 40px;
+    padding-left: 5px;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  /* Portfolio styles */
+  #portfolio {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Styles for list items inside element with ID 'portfolio' */
+  #portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for list items inside element with ID 'portfolio' on hover */
+  #portfolio li:hover {
+    background: #eee;
+  }
+  
+  /* Styles for links inside element with ID 'portfolio' */
+  #portfolio a {
+    text-decoration: none;
+    color: #454545;
+  }
+  
