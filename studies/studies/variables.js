@@ -78,3 +78,14 @@ console.log(firstName)
 */
 let potato = 'baked'
 console.log(potato)
+
+let scopeExample = function(cond){
+let mess = `I'm outside`; //in the outer block scope of the function, mess is set to I'm outside
+if(cond){
+    let mess = `I'm inside` //in the inner block scope of the function, mess is set to I'm inside
+    console.log(mess) //this will log I'm inside
+}
+console.log(mess)//this will log I'm outside
+}
+scopeExample(true); // this will log both I'm inside and I'm outside because cond is true and the let variables are block scoped
+scopeExample(false); //this will log I'm outside because the cond is false and the outer block scope console log statement is I'm outside
