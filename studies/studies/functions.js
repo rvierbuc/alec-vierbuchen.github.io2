@@ -1,5 +1,9 @@
 //FUNCTIONS:
-
+/**
+ * Functions are blocks of code that can be used to perform some particular task.
+ * Functions are reusable and can be called to whenever that task is necessary in 
+ * the devoloper's code.
+ */
 //1. The Two Phases of Functions
 /**
  * There are two phases of functions: declaration, and execution. To use a function it must be declared.

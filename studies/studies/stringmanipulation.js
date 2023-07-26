@@ -1,5 +1,9 @@
 //STRING MANIPULATION:
-
+/**
+ * String manipulation is the modification and manipulation of strings to create
+ * new strings with different content or formats. Strings are a sequence of characters enclosed
+ * in '', "", or ``.
+ */
 //1. With Operators:
 /**
  * Strings can be manipulated with various operators like the 

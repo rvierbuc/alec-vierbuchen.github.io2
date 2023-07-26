@@ -1,5 +1,8 @@
 //CONTROL FLOW:
-
+/**
+ * Control flow is the sequence in which code is executed in a program. It allows developers to
+ * control the order code is executed in using if statements, switch statements, loops, and break.
+ */
 //1. If
 /**
  * If is a conditional. It will execute a block of code if the condition evaluates to true.

@@ -1,5 +1,9 @@
 //OPERATORS:
-
+/**
+ * Operators are symbols or keywords that produce perform operations on one or more operands.
+ * They interact with these values or variables to produce a result. They allow developers to 
+ * manipulate data and perform simple tasks. 
+ */
 //1.Assignment Operators:
 /**
  * Assignment operators are used to assign a value to a variable. "=" assigns the value

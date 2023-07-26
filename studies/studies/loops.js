@@ -1,5 +1,8 @@
 //LOOPS:
-
+/**
+ * Loops allow a developer to execute a block of code a specific number of times,
+ * or while a condition is true. They are useful for streamlining repetetive tasks.
+ */
 //1. While loop:
 /**
  * While loops will execute a block of code as long as a condition is true. The condition must be changed
