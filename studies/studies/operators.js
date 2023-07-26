@@ -32,3 +32,45 @@ console.log(a);
 
 console.log(5 < 10);
 //this will print true to console because 5 is less than 10.
+
+//4. Logical Operators:
+/**Logical operators combine bolean values in javascript. They include &&, ||, and !, 
+ * and, or, and not, respectively.
+ */
+let yes = true
+let please = true
+let no = false
+if(yes && please){
+    console.log('Polite.')
+}
+//The above example will log 'Polite.' to console because yes and please are both true. 
+if(yes && !please){
+    console.log('Less polite.')
+}
+//The above will not log anything to console because while yes is true, not please is not true.
+if(yes || please || no){
+    console.log('Words were spoken.')
+}
+//The above will log 'Words were spoken.' because at least one of the conditions evaluates to true.
+
+//5. Unary Operators:
+/**Unary operators operate on a single operand. Examples include the 
+ * not operator (!), type of, and the negation operator '-'.  
+ */
+
+let bool = !false; //bool is not false
+console.log(bool) //not false is true
+console.log(typeof bool); //type of bool returns 'boolean'
+let num = 42
+console.log(-num); //logs -42
+
+//6. Ternary Operator:
+/**
+ * Ternary operators provide a shorthand for if/else statements.
+ * "?"" represents the if statement and : seperates the else
+ * statement.
+ */
+let a = true; //sets a equal to true
+console.log(a ? 'yes' : 'no') //because a is true, this evaluates to yes
+a = false //sets a to false
+console.log(a ? 'yes' : 'no') //because a is false, this evaluates to no
