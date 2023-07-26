@@ -17,10 +17,21 @@ x = 11 //assigns x to 11
  * Common arithmatic operators include +, -, /, *, and %, addition, subtraction, division,
  * multiplication, and the modulo, respectively.
  */ 
-
-let a = 3 * 2;
-console.log(a);
+let add = 3 + 2;
+console.log(add);
+//this will print 5 to the console because 3 plus two is five
+let minus = 3 - 2;
+console.log(minus);
+//this will print 1 to the console because 3 minus 2 is 1
+let divid = 4 / 2;
+console.log(divid);
+//this will print 2 to console because 4 divided by 2 is 2
+let mult = 3 * 2;
+console.log(mult);
 //this will print 6 to console because 3 multiplied by 2 is 6.
+let modul = 3 % 2;
+console.log(modul);
+//this will print 1 to console because the remainder of 3 divided by 2 is 1.
 
 //Comparison Operators:
 
@@ -29,9 +40,22 @@ console.log(a);
  * not loosely equal, greater than, less than, greater than or equal to, and less than or equal to,
  * respectively. 
  */
-
+console.log(5 === '5');
+//this will print false because the number five is not strictly equal to the string 5
+console.log(5 == '5');
+//this will print true because the number five is loosely equal to the string 5
+console.log(5 !== '5');
+//this will print true because the number five is not strictly equal to the string 5
+console.log(5 != '5');
+//this will print false because the number five is loosely equal to the string 5
+console.log(5 > 10);
+//this will print false to console because 5 is not greater than 10.
 console.log(5 < 10);
 //this will print true to console because 5 is less than 10.
+console.log(5 <= 5);
+//this will print true to console because 5 is less than or equal to 5.
+console.log(5 >= 6);
+//this will print false to console because 5 is not greater than or equal to 6.
 
 //4. Logical Operators:
 /**Logical operators combine bolean values in javascript. They include &&, ||, and !, 

@@ -30,23 +30,36 @@ myName = 'bob';
 console.log(myName); // prints => bob
 
 // NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
+//var is used to declare variables less often now, but in older javascript var was the only keyword
+//available to declare variables. When a variable is declared with var, during compiling the declaration
+//is hoisted to the top of the code. While the declaration is hoisted, the assigned value is not,
+//so the variable is undefined until assigned. 
 var myVariable = 1;
 var myVariable = true;
 myVariable = "someString";
 
 //4. Let
+/**Let is another key word for declaring variables. Let is block scoped, meaning it is only available
+ * in the scope it is declared in. Let can be reassigned at any time. Let is not hoisted 
+ * and must be declared before being used. 
+*/
 //1. declaration and assignment //
 let num = 22;
 num = 11
 console.log(num);
 
 //5. Const
+/**Const is another key word for declaring variables. Const is block scoped, it is only available in the scope 
+ * in which it is defined. Const cannot be reassigned after being declared. Const is not hoisted. You must declare
+ * const before it can be used. 
+ */
 //declaration of const //
 const half = .5;
 console.log(half)
 //constants cannot be reassigned
 //half = .25 would cause an TypeError: Assignment to constant variable
-//Hoisting:
+
+//6. Hoisting:
 /**
  * Variable declarations are hoisted to the top of their scope when javascript is compiled.
  * This allows you to access values before they are declared. In the example below, var firstName;
